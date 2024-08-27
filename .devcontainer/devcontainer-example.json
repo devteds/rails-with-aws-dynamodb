@@ -1,0 +1,25 @@
+{
+  "name": "Rails API Container",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "api",
+  "shutdownAction": "stopCompose",
+  "workspaceFolder": "/workspace",
+  // https://containers.dev/features
+  "features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  // Update the source path
+  "mounts": [
+    {
+      "source": "/Users/<USERNAME>/.ssh",
+      "target": "/home/vscode/.ssh",
+      "type": "bind"
+    },
+    {
+      "source": "/Users/<USERNAME>/.aws",
+      "target": "/home/vscode/.aws",
+      "type": "bind"
+    }
+  ]  
+}

@@ -1,0 +1,26 @@
+services:
+
+  api:
+    build:
+      context: .
+      target: develop
+    command: tail -f /dev/null  
+    volumes:
+      - .:/workspace:cached    
+    links:
+      - dynamo
+    ports:
+      - 3400:3000      
+    depends_on:
+      - dynamo
+    environment:
+      DYNAMODB_ENDPOINT: http://dynamo:8000
+      AWS_ACCESS_KEY_ID: AxxxxxxxxxxxxxND
+      AWS_SECRET_ACCESS_KEY: Pxxxxxxxxxxxxxx9e
+      RAILS_ENV: development
+
+  dynamo:
+    image: amazon/dynamodb-local
+    ports:
+      - "8400:8000"
+    command: "-jar DynamoDBLocal.jar -sharedDb"
