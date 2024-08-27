@@ -92,3 +92,9 @@ curl -s http://localhost:3400/products | jq
 curl -v http://localhost:3400/products
 ```
 
+## Tools & Versions I used
+
+- MacOS - M1
+- Docker 24.0.2, build cb74dfc
+- Docker Compose version v2.18.1
+- VSCode 1.87.2 (Universal)

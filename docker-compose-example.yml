@@ -20,7 +20,7 @@ services:
       RAILS_ENV: development
 
   dynamo:
-    image: amazon/dynamodb-local
+    image: amazon/dynamodb-local:2.5.2
     ports:
       - "8400:8000"
     command: "-jar DynamoDBLocal.jar -sharedDb"
