@@ -26,7 +26,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem 'aws-sdk-dynamodb', '~> 1.118.0'
+# gem 'aws-sdk-dynamodb', '~> 1.118.0'
 gem 'aws-sdk-rails', '~> 4.0.3'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible

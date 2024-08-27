@@ -11,5 +11,4 @@ if (aws_key_id = ENV['AWS_ACCESS_KEY_ID']).present?
 end
 
 # AppRunner or ECS, use IAM instance role for DynamoDB access
-
 Aws.config.update(aws_config)
